@@ -1,0 +1,46 @@
+.basket {
+    width: 100px;
+    padding-left: 34px;
+    background: url("../images/basket-icon.svg") no-repeat left center;
+    position: relative;
+}
+
+.basket__number {
+    position: absolute;
+    top: 3px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: $red;
+    color: $white;
+    font-size: 8px;
+}
+
+.basket__link {
+    @extend %roboto-bold;
+    font-size: 14px;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.basket__price,
+.basket__currency {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 22px;
+    height: 16px;
+}
+
+.basket__price {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    max-width: 50px;
+}

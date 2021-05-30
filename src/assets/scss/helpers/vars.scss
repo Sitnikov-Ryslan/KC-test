@@ -1,0 +1,27 @@
+$white: #FFF;
+$grey: #E4E4E4;
+$light-grey: #F6F6EF;
+$black: #000;
+$yellow: #FCCB06;
+$red: #F50202;
+
+
+$desktop: 1152px;
+$tablet: 1023px;
+$mobile: 687px;
+
+@mixin breakpoint($bp) {
+    @media (max-width: $bp) {
+        @content;
+    }
+}
+
+%roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+%roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}

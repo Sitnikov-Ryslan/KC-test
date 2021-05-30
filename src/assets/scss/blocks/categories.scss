@@ -1,0 +1,72 @@
+.categories {
+    border-bottom: 1px solid $grey;
+    padding-bottom: 14px;
+    margin-bottom: 19px;
+}
+
+.categories__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.categories__item {
+    width: 350px;
+    height: 67px;
+    margin-bottom: 14px;
+    margin-right: 26px;
+    background: url("../images/pilaf.jpg") no-repeat center center;
+
+    &:nth-child(6n) {
+        background: url("../images/bread.jpg") no-repeat center center;
+    }
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+.categories__btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: transparent;
+    padding-left: 17px;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba($yellow, 0.3);
+    }
+}
+
+.categories__text {
+    @extend %roboto-bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.categories__open_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100px;
+    height: 32px;
+    margin: 0 auto;
+    border: 0;
+    padding: 0;
+    background: url("../images/arrow-down.svg") no-repeat center top;
+    cursor: pointer;
+
+    &:hover .categories__open_text {
+        color: $red;
+    }
+}
+
+.categories__open_text {
+    @extend %roboto-bold;
+    font-size: 14px;
+    line-height: 22px;
+}

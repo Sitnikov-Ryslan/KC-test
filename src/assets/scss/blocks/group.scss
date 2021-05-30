@@ -1,0 +1,35 @@
+.group {
+    margin-bottom: 30px;
+}
+
+.group__link {
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 17px;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.group__title {
+    @extend %roboto-bold;
+    font-size: 36px;
+    line-height: 36px;
+    display: inline-block;
+    margin-right: 52px;
+}
+
+.group__text {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.group__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

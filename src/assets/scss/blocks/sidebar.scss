@@ -1,0 +1,100 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 341px;
+    height: 793px;
+    background: $white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    transform: translateX(-100%);
+    transition: transform .2s;
+
+    &.show {
+        transform: translateX(0);
+        z-index: 2;
+    }
+}
+
+.sidebar__content {
+    display: flex;
+    flex-direction: column;
+    margin: 26px 0;
+}
+
+.sidebar__phone {
+    height: 24px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 52px;
+    margin-bottom: 14px;
+    background: url("../images/phone-icon.svg") no-repeat 19px center;
+}
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $grey;
+    padding: 0 19px 12px;
+    margin-bottom: 10px;
+}
+
+.sidebar__nav_link {
+    @extend %roboto-bold;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 14px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.sidebar__list_title {
+    @extend %roboto-bold;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba($black, 0.5);
+    margin-bottom: 12px;
+    padding-left: 19px;
+}
+
+.sidebar__list {
+    padding-left: 19px;
+}
+
+.sidebar__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sidebar__list_link {
+    font-size: 18px;
+    line-height: 22px;
+
+    &:hover {
+        color: $yellow;
+    }
+}
+
+.sidebar__close {
+    position: absolute;
+    top: 26px;
+    right: 19px;
+    width: 18px;
+    height: 18px;
+    background: url("../images/close-icon.svg") no-repeat center center;
+    border: 0;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
